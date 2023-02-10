@@ -1,0 +1,221 @@
+$base-color: #225779;
+$base-alt-color: #38a3a5;
+$second-color: #bdeec4;
+$second-alt-color: #ffc300;
+
+$text-primary: #225779;
+$text-alt-primary: #bdeec4;
+$text-secondary: #38a3a5;
+
+.post-calendar-style-7 {
+  @import "../base";
+  .vc-main-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    .vc-title {
+      width: 25%;
+      h3 {
+        color: $text-primary;
+        font-size: 36px;
+        line-height: 30px;
+      }
+      h5 {
+        color: $text-secondary;
+        font-size: 26px;
+        line-height: 20px;
+      }
+    }
+    .nav-sub-term-yp {
+      width: 70%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom: 2px solid #333;
+      li {
+        // color: $black !important;
+        position: relative;
+        border-radius: 0;
+        cursor: pointer;
+        list-style: none;
+        line-height: 18px;
+        font-size: 18px;
+        padding: 1.5rem 1rem;
+        width: max-content;
+        &.view-all {
+          padding: 0;
+        }
+        a {
+          color: $black !important;
+          border-radius: 0;
+          cursor: pointer;
+          list-style: none;
+          line-height: 18px;
+          font-size: 18px;
+          padding: 1.5rem 1rem;
+          width: max-content;
+        }
+        &.active,
+        &:hover {
+          color: $text-primary;
+          margin-right: 0;
+          background: none;
+          font-weight: 600;
+        }
+        &.active::before {
+          content: "";
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          padding: 3px;
+          background-color: #225779;
+        }
+      }
+    }
+    .content-post-tab-yp {
+      .row .vc-post:first-child {
+        border-bottom: 1px solid #eee;
+      }
+    }
+    .term-link-all {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $base-alt-color;
+      font-size: 22px;
+      span {
+        background-color: $base-alt-color;
+        display: flex;
+        margin-right: 0.5rem;
+        svg {
+          width: 22px;
+          height: 22px;
+          color: $white;
+        }
+      }
+    }
+  }
+  .vc-post {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    a:hover {
+      color: inherit;
+    }
+    .vc-post-date {
+      width: max-content;
+      display: flex;
+      align-content: center;
+      color: $white;
+      background-color: $base-alt-color;
+      padding: 0 0.5rem;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .vc-thumbnail {
+      position: relative;
+      overflow: hidden;
+      height: 50%;
+      a {
+        display: block;
+        overflow: hidden;
+        height: 100%;
+        position: relative;
+      }
+      img {
+        position: absolute;
+        width: auto;
+        max-width: none;
+        height: 100%;
+        left: calc(100% / 2);
+        transform: translateX(-50%);
+      }
+    }
+    .vc-info {
+      position: relative;
+      transform: translateY(-2rem);
+      background-color: $white;
+      padding: 0.75rem;
+      margin: auto 0.75rem;
+      min-height: 190px;
+      .vc-title,
+      .excerpt {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        box-orient: vertical;
+        line-clamp: 3;
+      }
+      .vc-title {
+        margin-bottom: 0.5rem;
+        h3 {
+          color: $text-primary;
+          font-size: 24px;
+          line-height: 20px;
+        }
+      }
+      .excerpt {
+        line-height: 18px;
+      }
+      .vc-view-more {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        div:first-child {
+          width: 75%;
+          color: $white;
+          background-color: $base-color;
+          padding: 0.5rem;
+        }
+        div:last-child {
+          width: 25%;
+          color: $text-primary;
+          background-color: $second-color;
+          padding: 0.385rem;
+        }
+        i {
+          padding-top: 5px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 998px) {
+  .post-calendar-style-7 {
+    .vc-main-title {
+      gap: 1rem;
+      flex-direction: column;
+      .vc-title {
+        width: 100%;
+      }
+      .nav-sub-term-yp {
+        width: 100%;
+        flex-direction: column;
+        li {
+          padding: 1rem;
+          text-align: center;
+          width: 100%;
+        }
+        .term-link-all {
+          padding: 1rem;
+          width: 100%;
+        }
+      }
+    }
+    .vc-post-alt {
+      width: calc(100% - 10px);
+    }
+  }
+}

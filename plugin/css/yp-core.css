@@ -1,0 +1,54 @@
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev,
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next
+ {
+    background-image: none!important;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+  display: none;
+}
+
+.vc_banner .swiper-button-prev,.vc_banner .swiper-button-next{
+    background-color: #fff!important;
+    box-shadow: 0 0 6px hsl(0deg 0% 0% / 9%);
+    border-radius: 50%;
+    width: 40px!important;
+    height: 40px!important;
+    text-align: center;
+}
+
+.vc_banner .swiper-button-prev svg,.vc_banner .swiper-button-next svg  {
+    padding: 0;
+}
+#flowpaper-logo-bottom {
+    display: none!important;
+}
+#carousel_home_banner .swiper-pagination {
+    bottom: 10px;
+}
+
+
+.minimize-banner {
+    position: absolute;
+    z-index: 101;
+    right: 15%;
+    bottom: 4px;
+    border-radius: 0;
+    font-size: 14px;
+    padding: 0;
+    background: #0000;
+}
+
+.minimize-banner.active {
+    z-index: 1;
+    bottom: auto;
+    position: fixed;
+    top: 200px;
+}
+button.minimize-banner svg {
+    background: #f57922;
+}
+
+#carousel_home_banner .swiper-wrapper.hide {
+    display: block!important;
+    height: 0!important;
+}
